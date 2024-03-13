@@ -1,0 +1,213 @@
+
+body
+{
+    background-color: rgb(42, 164, 198);
+    margin: 0;
+    /* height: 1000px; */
+   
+}
+
+
+nav{
+    padding: 1%;
+    font-size: 30px;
+    font-family: Lato;
+    color: rgba(0, 0, 255, 0.507);
+    letter-spacing: 5px;
+    font-weight: 600;
+    background-color: black;
+    
+}
+
+.hero_section
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-inline: 2%;
+}
+
+.voice
+{
+    color: black;
+    color: aliceblue;
+}
+
+.para{
+    font-family: lato;
+    font-size: 90px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: rgb(12, 19, 236);
+    /* color: blue; */
+}
+
+.small_text
+{
+    /* margin-top: -100px; */
+    font-size: 22px;
+    font-family: roboto;
+    font-weight: 500;
+    color: rgb(47, 47, 57);
+}
+
+.hero_img
+{
+    margin-top: 20px;
+    margin-right: 80px;
+    height: 360px;
+    width: 360px;
+}
+
+
+
+.content
+{
+    padding-top: 2%;
+    margin-top: 17.5%;
+    background-color: black;
+    /* height: 2100px; */
+    
+}
+h1
+{
+    
+    color: aliceblue;
+    font-family: lato;
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.h1_sp
+{
+    color: blue;
+    font-size: 80px;
+}
+
+
+.elements
+{
+    color: gray;
+    padding: 5%;
+}
+
+.imagge
+{
+    height: 300px;
+    /* width:200px */
+}
+
+
+
+.elements
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 100px;
+}
+
+.element
+{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    /* justify-content: space-evenly; */
+}
+
+.element p{
+    font-family: lato;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(12, 19, 236);
+
+}
+
+.element span{
+    font-family: roboto;
+    font-size: 20px;
+
+}
+.two
+{
+    height: 200px;
+}
+
+.four
+{
+    height: 300px;
+}
+
+
+.button
+{
+    padding: 1%;
+    height: 700px;
+}
+.bt_cont
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+}
+
+button {
+    cursor: pointer;
+    height: 400px;
+    width: 400px;
+    border: 0;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,  #0033cc, #1163df);
+    /* background: linear-gradient(to bottom right,  #0033cc, #0066ff); */
+    box-shadow: 0 15px 8px 5px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s ease-in-out;
+    font-size: 50px;
+}
+
+button span
+{
+    
+    margin-bottom: 10px;
+    font-size: 20px;
+    animation: blink 1s infinite;
+}
+
+button p
+{
+    color: aliceblue;
+    font-weight: 600;
+}
+
+button:hover {
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.7);
+    background: linear-gradient(to bottom right,  #0033cc, #0066ff);
+    /* background: linear-gradient(to bottom right,  #0033cc, #1163df); */
+}
+
+@keyframes blink
+{
+    0%
+    {
+        opacity: 0.5;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0.5;
+    }
+}
+
+button:active
+{
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
