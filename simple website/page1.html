@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #3498db, #2ecc71);
+        }
+
+        #topFrame {
+            border: 4px solid;
+            border-color: black;
+            height: auto;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            
+            
+        }
+        #leftFrame ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #leftFrame li {
+            margin-right: 10px; /* Adjust spacing between items */
+        }
+        
+
+        #leftFrame {
+            border: 4px solid black;
+            border-top: none;
+            width: 20%;
+            min-height: 80vh;
+            overflow: auto;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+ 
+        }
+        #leftFrame a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            width: 50%;
+            border: solid 2px black;
+            box-sizing: border-box;
+        }
+        #leftFrame a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        #rightFrame {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            border: 4px solid black;
+            border-top: none;
+            border-left: none;
+            width: 80%;
+            min-height: 80vh; /* Adjust as needed */
+            padding: 20px;
+            overflow: auto;
+            box-sizing: border-box;
+            float: right;
+        }
+        
+        #leftFrame, #rightFrame {
+            box-sizing: border-box;
+            height: calc(100vh - 100px); /* Adjust for the height of the topFrame */
+        }
+        .register
+        {
+            position: relative;
+            width: 360px;
+            height: 750px;
+            padding: 40px;
+            padding-top: 22px;
+            padding-bottom: 32px;
+            border: solid 2px rgb(255, 255, 255, .5);
+            background: transparent;
+            backdrop-filter: blur(50px);
+            border-radius: 40px;
+            box-shadow: 15px 15px 30px rgb(0, 0, 0, .5);
+            
+        }
+        .register h1
+        {
+            text-align: center;
+        }
+        .register .input_box
+        {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 25px 0;
+        }
+        .input_box input
+        {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
+            padding-right: 23px;
+        }
+        
+        .input_box select, textarea
+        {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
+            font-weight: 200;
+        }
+        .input_box label
+        {
+            position: absolute;
+            top: 60%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: black;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .4s;
+        }
+        .input_box label[for='DOB']
+        {
+            position: absolute;
+            left: 90px;
+        } 
+        .input_box .icon
+        {
+            position: absolute;
+            top: 60%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .btn
+        {
+            position: relative;
+            width: 100%;
+            height: 35px;
+            background: transparent;
+            border: solid 2px black;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            color: black;
+            z-index: 1;
+            overflow: hidden;
+
+        }
+        .btn::before
+        {
+            content: '';
+            position: absolute;
+            top: -200%;
+            left: 0;
+            width: 100%;
+            height: 300%;
+            background: linear-gradient( to bottom left, #2ecc71, rgb(255, 255, 255, .3), #2ecc71, rgb(255, 255, 255, .3));
+            z-index: -1;
+            transition: .5s;
+
+        }
+        .btn:hover::before
+        {
+            top: 0;
+        }
+        .input_box input:focus ~ label,
+        .input_box input:valid ~ label
+        {
+            top: -5px;
+            
+        }
+
+        
+        
+
+        /* Add additional styling as needed */
+    </style>
+</head>
+<body>
+
+    <div id="topFrame">
+        <!-- Logo and title go here -->
+        <img src="pfl.jpg" alt="Your Logo" height="100">
+        <h1>Praveen's Free Learning</h1>
+    </div>
+
+    <div id="leftFrame">
+        <!-- Links to different web pages go here -->
+        <ul>
+            <li><a href="page1.html">Registration</a></li>
+            <br>
+            <li><a href="page2.html">Login</a></li>
+            <br>
+            <li><a href="page3.html">Contact Us</a></li>
+            <br>
+            <!-- Add more links as needed -->
+        </ul>
+    </div>
+
+    <div id="rightFrame">
+        <h1>Fill your details and Get free account  <img src="wink_img.png" alt='happy emoji' height="30" width="30" > !!!...</h1>
+        <div class="register">
+            <h1>Register</h1>
+            <form action="process_form.php" method="post">
+                <div class="input_box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text"  required>
+                    <label for="username">Username</label>
+                    
+                </div>
+                <div class="input_box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="input_box">
+                    <span class="icon">
+                        <ion-icon name="key"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label for="cpassword">Confirm-Password</Confirm-Password></label>
+                </div>
+                <div class="input_box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label for="email">Email</label>
+                    
+                </div>
+                <div class="input_box">
+                    <span class="icon">
+                        <ion-icon name="call"></ion-icon>
+                    </span>
+                    <input type="number"  required>
+                    <label for="mobile">Mobile Number</label>
+                    
+                </div>
+                <div class="input_box">
+                    <input type="date" required>
+                    <label for="DOB">(DOB)</label>
+                </div>
+                <div class="input_box">
+                    <select name="password" id="Password" placeholder="Enter Password" required>
+                        <option value="" disabled selected>select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Fe-Male</Fe-Male></option>
+                    </select>
+                </div>
+                <div class="input_box">
+                    <textarea name="address" id="address"></textarea>
+                    <label for="address">Address</label>
+                </div>
+                <button type="submit" class="btn">Sign-in</button>
+            </form>
+            
+                
+        </div>
+        
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
